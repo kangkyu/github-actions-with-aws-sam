@@ -20,6 +20,7 @@ jobs:
       - run: sam build --use-container
 
       # Run Unit tests here 
+      - run: go test -v ./...
 
       # sam deploy
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-hello-world --s3-bucket hello-world-here --capabilities CAPABILITY_IAM --region us-west-2
